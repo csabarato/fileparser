@@ -1,4 +1,4 @@
-package main.java;
+package main.java.fileparser;
 
 
 import java.util.Map;
