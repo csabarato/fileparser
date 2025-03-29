@@ -1,0 +1,46 @@
+1. Explain what the transform method is doing:
+
+    The transform function takes an integer as an input.
+
+    The function iterates through the digits of the number,
+    and takes the square of each digit in each iteration.
+
+    Then returns the sum of the squares of the digits.
+
+    It iterates until the input number is > 0.
+
+    For example: input number: 42
+
+    1st iter:
+
+        result = 0
+        42 % 10 = 2 ; 2 * 2 = 4
+        result = 4
+        input = 42 / 10 = 4
+
+    2nd iter:
+        result = 4
+        4 % 10 = 4 ; 4 * 4 = 16
+        result = 20
+        input = 4 / 10 = 0
+
+    input = 0, end of while loop.
+
+2. Identify potential issues and inefficiencies
+
+    The transform function name is not descriptive. It is not clear what it does
+    from the function name. Better name could be: sumOfDigitSquares
+
+    The function not working properly for negative numbers.
+    For every negative number it returns 0. It not enters the while loop,
+    because it checks if the input is greater than 0.
+
+    Option 1: modify method name to describe, what it does:
+
+        sumOfDigitSquaresOfPositiveNumber
+
+    Option 2: refactor while loop condition, to handle negative nums.
+
+        while (input != 0)
+
+3. Use Math.pow to calculate the square of each digit. It's more understandable.
